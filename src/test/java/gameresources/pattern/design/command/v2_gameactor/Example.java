@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 class Example {
     @Test
-    public void commandTest() {
+    void commandTest() {
         InputHandler inputHandler = new ControllerInputHandler();
         ICommand command = inputHandler.handleInput();
         if (command != null) {
