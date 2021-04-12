@@ -1,5 +1,6 @@
 package gameresources.pattern.design.singleton.v4_ensure_one_instance;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class Example {
@@ -11,7 +12,10 @@ class Example {
 
     @Test
     public void test_nok() {
-        new MySingleton();
-        new MySingleton();
+        Assertions.assertThrows(AssertionError.class, () -> {
+            new MySingleton();
+            new MySingleton();
+        });
+
     }
 }
