@@ -6,6 +6,6 @@ class Example {
     @Test
     public void test() {
         GraphNode graphNode = new GraphNode(null);
-        graphNode.render(Transform.origin());
+        graphNode.render(Transform.origin(), true);
     }
 }
