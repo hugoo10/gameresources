@@ -1,7 +1,8 @@
 module gameresources {
     requires static lombok;
 
-    requires java.desktop;
+    requires javafx.controls;
     requires com.google.gson;
-    //exports gameresources;
+
+    exports fr.kahlouch.gameresources.pattern.game_loop;
 }
