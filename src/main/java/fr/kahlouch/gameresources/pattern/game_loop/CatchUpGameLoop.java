@@ -10,7 +10,6 @@ public abstract class CatchUpGameLoop extends DesiredFpsGameLoop {
         this.lag += elapsedNano;
         processInput();
         while (this.lag >= this.nanoPerFrame) {
-            System.err.println(this.lag + " // " + this.nanoPerFrame);
             update();
             this.lag -= this.nanoPerFrame;
         }

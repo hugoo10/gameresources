@@ -5,4 +5,6 @@ module gameresources {
     requires com.google.gson;
 
     exports fr.kahlouch.gameresources.pattern.game_loop;
+    exports fr.kahlouch.gameresources.input_handling;
+    exports fr.kahlouch.gameresources.graphics;
 }
