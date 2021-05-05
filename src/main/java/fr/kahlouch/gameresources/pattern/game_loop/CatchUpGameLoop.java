@@ -1,7 +1,7 @@
 package fr.kahlouch.gameresources.pattern.game_loop;
 
 public abstract class CatchUpGameLoop extends DesiredFpsGameLoop {
-    protected CatchUpGameLoop(int desiredFps) {
+    protected CatchUpGameLoop(float desiredFps) {
         super(desiredFps);
     }
 

@@ -1,11 +1,15 @@
 package fr.kahlouch.gameresources.pattern.game_loop;
 
 abstract class DesiredFpsGameLoop extends GameLoop {
-    protected final long nanoPerFrame;
+    protected long nanoPerFrame;
     protected long lag;
 
-    protected DesiredFpsGameLoop(int desiredFps) {
-        this.nanoPerFrame = 1_000_000_000 / desiredFps;
+    protected DesiredFpsGameLoop(float desiredFps) {
+        setDesiredFps(desiredFps);
         this.lag = 0;
+    }
+
+    public void setDesiredFps(float desiredFps) {
+        this.nanoPerFrame = Math.round(1_000_000_000D / desiredFps);
     }
 }

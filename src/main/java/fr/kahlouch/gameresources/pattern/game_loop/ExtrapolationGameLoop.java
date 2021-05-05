@@ -1,7 +1,7 @@
 package fr.kahlouch.gameresources.pattern.game_loop;
 
 public abstract class ExtrapolationGameLoop extends DesiredFpsGameLoop {
-    protected ExtrapolationGameLoop(int desiredFps) {
+    protected ExtrapolationGameLoop(float desiredFps) {
         super(desiredFps);
     }
 
