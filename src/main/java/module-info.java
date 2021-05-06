@@ -7,5 +7,5 @@ module gameresources {
     exports fr.kahlouch.gameresources.controller;
     exports fr.kahlouch.gameresources.pattern.game_loop;
     exports fr.kahlouch.gameresources.input_handling;
-    exports fr.kahlouch.gameresources.graphics;
+    exports fr.kahlouch.gameresources.graphics._2d;
 }
