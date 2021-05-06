@@ -22,6 +22,7 @@ public class Graphics2D {
         this.scene = new Scene(this.rootGroup);
         this.stage.setScene(this.scene);
         this.gameRoot = new Group();
+        this.rootGroup.getChildren().add(gameRoot);
         this.cameraGroup = null;
 
         stage.setOnCloseRequest(e -> {

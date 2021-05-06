@@ -5,6 +5,7 @@ import javafx.geometry.Point3D;
 import javafx.scene.Camera;
 import javafx.scene.Group;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Graphics2DBuilder {
     private final Stage stage;
@@ -14,6 +15,7 @@ public class Graphics2DBuilder {
     private Point2D position;
     private boolean resizable;
     private boolean fullScreen;
+    private boolean undecorate;
 
 
     Graphics2DBuilder(final Stage stage) {
@@ -22,6 +24,7 @@ public class Graphics2DBuilder {
         this.cameraPosition = null;
         this.resizable = true;
         this.fullScreen = false;
+        this.undecorate = false;
         this.dimension = null;
         this.position = null;
     }
@@ -43,6 +46,11 @@ public class Graphics2DBuilder {
 
     public Graphics2DBuilder setFullScreen(final boolean fullScreen) {
         this.fullScreen = fullScreen;
+        return this;
+    }
+
+    public Graphics2DBuilder setUndecorate(final boolean undecorate) {
+        this.undecorate = undecorate;
         return this;
     }
 
@@ -70,6 +78,9 @@ public class Graphics2DBuilder {
         if (this.position != null) {
             stage.setX(this.position.getX());
             stage.setY(this.position.getY());
+        }
+        if(this.undecorate) {
+            graphics.stage.initStyle(StageStyle.UNDECORATED);
         }
         graphics.stage.setResizable(this.resizable);
         graphics.stage.setFullScreen(this.fullScreen);
