@@ -4,7 +4,9 @@ import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import lombok.NonNull;
 
 public class Graphics2D {
     final Stage stage;
@@ -54,6 +56,16 @@ public class Graphics2D {
     public final void draw(Node node) {
         this.next.getChildren().add(node);
     }
+
+
+    public final void draw(ImageView image, @NonNull double width, @NonNull double height) {
+        image.setFitWidth(width);
+        image.setFitHeight(height);
+        image.setSmooth(true);
+        image.setCache(true);
+        this.draw(image);
+    }
+
 
     public void show() {
         stage.show();
